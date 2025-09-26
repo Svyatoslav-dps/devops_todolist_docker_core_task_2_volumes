@@ -9,14 +9,14 @@ docker network list
 docker network inspect bridge
 Searcing for our container and copy the ip to the 'HOST': '172.17.0.2'
 
-docker build . -t todoapp:2.0.0
-
-docker run -d -p 8000:8000 --name todo-app todoapp:2.0.0
+docker build -t svyat2x/todoapp:2.0.0 -t todoapp .
+docker push svyat2x/todoapp:2.0.0
+Запуск: docker run -p 8080:8080 svyat2x/todoapp:2.0.0
 
 docker ps
 
 # Link to the Dockerhub:
-https://hub.docker.com/repository/docker/svyat2x/mysql-local/general
+https://hub.docker.com/r/svyat2x/todoapp/tags?name=2.0.0
 
 # How to access the application via a browser:
 http://localhost:8000 
